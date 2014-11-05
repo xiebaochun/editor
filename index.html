@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<title>work book</title>
+  	<meta charset="utf-8">
+  	<link rel="stylesheet" type="text/css" href="css/main.css">	
+  	<script type="text/javascript" src="js/jquery-2.1.1.js"></script>
+    <script src="js/run_prettify.js"></script>
+  	<script type="text/javascript" src="js/main.js"></script>
+
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="window_bar">
+        <div class="window_bar_left"></div>
+        <div class="window_bar_right">
+          <div class="button" id="min">—</div>
+          <div class="button" id="max">口</div>
+          <div class="button" id="close">X</div>
+        </div>      
+      </div>
+      <div class="tool_bar">
+         <div class="button" id="bold" value="bold">加粗</div>
+         <div class="button" id="getHtml" value="getHtml">获取文本</div>
+         <div class="button" id="save" value="保存">保存</div>
+         <div class="button" id="show" value="显示">显示</div>
+
+        <div class="tool_bar_description">字体</div><select id="fonts" onChange="fontEdit('fontname',this[this.selectedIndex].value)">  
+           <option value="Arial">Arial</option>  
+           <option value="Comic Sans MS">Comic Sans MS</option>  
+           <option value="Courier New">Courier New</option>  
+           <option value="Monotype Corsiva">Monotype</option>  
+           <option value="Tahoma">Tahoma</option>  
+           <option value="Times">Times</option>  
+        </select>  
+        <div class="tool_bar_description">字体大小</div><select id="size" onChange="fontEdit('fontsize',this[this.selectedIndex].value)">  
+           <option value="1">1</option>  
+           <option value="2">2</option>  
+           <option value="3">3</option>  
+           <option value="4">4</option>  
+           <option value="5">5</option>  
+        </select>  
+        <div class="tool_bar_description">字体颜色</div><select id="color" onChange="fontEdit('ForeColor',this[this.selectedIndex].value)">  
+           <option value="black">-</option>  
+           <option style="color:red;" value="red">-</option>  
+           <option style="color:blue;" value="blue">-</option>  
+           <option style="color:green;" value="green">-</option>  
+           <option style="color:pink;" value="pink">-</option>  
+        </select>   
+
+
+      </div>
+       <input id="title" value="标题">
+       <div id="file_list">
+         <ul id="file_ul">
+         </ul>
+       </div>
+       <iframe id="editor"></iframe>
+    </div>
+      
+
+  </body>
+</html>
